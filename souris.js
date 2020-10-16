@@ -7,14 +7,16 @@ modifDiv.style.height = "100px";
 modifDiv.style.width = "100px";
 modifDiv.style.backgroundColor = "white";
 
-
-
+let launcher = document.getElementById("launch");
+//document.addEventListener("focus", launch);
 
 //lancement de la boite
 
 let widthRandom = 0;
 let heightRandom;
-document.getElementById("launch").addEventListener("click", launchBox);
+let resultDiv =document.getElementById("result");
+let bestResultDiv = document.getElementById("bestResult");
+launcher.addEventListener("click", launchBox);
 function launchBox() {
     //recup de la taille de l'ecran
     let widthWindow = window.innerWidth;
@@ -31,10 +33,10 @@ function launchBox() {
     //placement de cible 
     modifDiv.style.left = widthRandom + 'px';
     modifDiv.style.top = heightRandom + 'px';
+
+    resultDiv.innerHTML="";
+    bestResultDiv.innerHTML="";
 }
-
-
-
 
 
 
@@ -79,18 +81,18 @@ function detect(event) {
     } else if (sum > 0 && sum <= 200) {
         console.log("bouillant");
     } else {
-        alert("victoire en : " + tentative + " coups!!!");
+        resultDiv.innerHTML="victoire en : " + tentative + " coups!!!";
         if (bestTentative == null) {
             bestTentative = tentative;
-            alert("vous venez d'effectué votre premier meilleur score!!!");
+            bestResultDiv.innerHTML="vous venez d'effectué votre premier meilleur score!!!";
             tentative=0;
         } else {
             if (bestTentative > tentative) {
                 bestTentative = tentative;
-                alert("vous venez de battre votre record!!!");
+                bestResultDiv.innerHTML="vous venez de battre votre record!!!";
                 tentative=0;
             } else {
-                alert("vous n'avez pas battue votre precedent record qui etait de : " + bestTentative);
+                bestResultDiv.innerHTML="vous n'avez pas battue votre precedent record qui etait de : " + bestTentative;
                 tentative=0;
             }
         }
