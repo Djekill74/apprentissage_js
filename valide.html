@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appretissage javascript</title>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">acceuil</a>
+        <a href="bug.html">bug</a>
+        <a href="souris.html">chercher la souris</a>
+        <a href="change.html">changer le bouton</a>
+        <a href="apimeteo.html">meteo</a>
+    </nav>
+    <main>
+        <form method="POST" action="rien">
+            <div>
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="userName" maxlength="30"/>
+            </div>
+            <div>
+                <label for="phone">entrer votre tel sous forme (0606060606):</label>
+                <input type="tel" id="phone" name="tel" required maxlength="10"/>
+            </div>
+            <div>
+                <label for="mail">e-mail :</label>
+                <input type="email" id="mail" name="userName"/>
+
+            </div>
+            <div class="submitButton">
+                <input type="button" value="controler" onclick="controleForm()">envoyer le formulaire</button>
+
+            </div>
+        </form>
+
+    </main>
+
+    <script src="./js/valide.js"></script>
+</body>
+
+</html>

@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>appretissage javascript</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav>
@@ -12,12 +11,12 @@
         <a href="bug.html">bug</a>
         <a href="souris.html">chercher la souris</a>
     </nav>
-<div id="launch">
-    <button>launch</button>
-</div>
-<div id="result"></div>
-<div id="bestResult"></div>
-<div id="cible"></div>
-<script async src="./js/souris.js"></script>
+    <main>
+        <button id="launchCondition">condition</button>
+        <p id="zoneMeteo">condition a allé chercher</p>
+        <button id="launchPrecis">Résultat précis</button>
+        <p id="zonePrecis">resultat</p>
+    </main>
+    <script src="./js/meteo.js"></script>
 </body>
 </html>

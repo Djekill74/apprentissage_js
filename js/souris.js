@@ -12,7 +12,7 @@ let launcher = document.getElementById("launch");
 
 //lancement de la boite
 
-let widthRandom = 0;
+let widthRandom;
 let heightRandom;
 let resultDiv =document.getElementById("result");
 let bestResultDiv = document.getElementById("bestResult");
